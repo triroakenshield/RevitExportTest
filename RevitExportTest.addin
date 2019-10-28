@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>RevitExportTest</Text>
+    <Description>RevitExportTest</Description>
+    <Assembly>RevitExportTest.dll</Assembly>
+    <FullClassName>RevitExportTest.Command</FullClassName>
+    <ClientId>44d59343-d7a5-4739-814d-d18447a8b75b</ClientId>
+    <VendorId>RevitExportTest</VendorId>
+    <VendorDescription>RevitExportTest</VendorDescription>
+  </AddIn>
+</RevitAddIns>
