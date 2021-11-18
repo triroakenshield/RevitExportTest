@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using System.Numerics;
-//
-using Autodesk.Revit.DB;
+﻿using Autodesk.Revit.DB;
 //
 using SharpGLTF.Geometry;
 using SharpGLTF.Geometry.VertexTypes;
 using SharpGLTF.Materials;
 using SharpGLTF.Schema2;
 
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Numerics;
+
 namespace RevitExportTest
 {
 
-    using VERTEX = VertexPosition;
     using RMaterial = Autodesk.Revit.DB.Material;
+    using VERTEX = VertexPosition;
 
     class TestExportContext : IExportContext
     {
@@ -77,7 +73,7 @@ namespace RevitExportTest
                 if (material.Transparency != 0)
                 {
                     m = new MaterialBuilder()
-                        .WithAlpha(AlphaMode.BLEND)
+                        .WithAlpha(SharpGLTF.Materials.AlphaMode.BLEND)
                         .WithDoubleSide(true)
                         .WithMetallicRoughnessShader()
                         .WithChannelParam("BaseColor", new Vector4(c.Red / 256f, c.Green / 256f, c.Blue / 256f, 1 - (material.Transparency / 128f)));
